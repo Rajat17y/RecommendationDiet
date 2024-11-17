@@ -17,6 +17,8 @@ import re
 # Load the Excel file
 file_path = "Food_Data.xlsx"
 excel_data = pd.ExcelFile(file_path)
+recipies = pd.read_csv("Cleaned_Indian_Food_Dataset.csv", on_bad_lines='skip', encoding="latin-1")
+
 
 # List all sheets
 #print(excel_data.sheet_names)
@@ -277,7 +279,7 @@ def recipy(content):
 
 diet(1,0,0,1,12)
 #print(incridents)
-#print(recipy(incridents))
+print(len(recipy(incridents)))
 
 
 # In[ ]:
